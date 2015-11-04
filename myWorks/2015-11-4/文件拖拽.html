@@ -1,0 +1,100 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>文件拖拽</title>
+<style>
+div { display:none; position:absolute; top:50%; left:50%; margin-left:-150px; margin-top:-150px; text-align:center; line-height:300px; font-size:30px;  width:300px; height:300px; border:2px dotted #ccc; }
+</style>
+<script>
+function DragFile()
+{
+	/*
+		文件拖拽：
+		1. ondragenter 当拖着文件进入的时候
+		2. ondragleave 当拖着文件离开的时候
+		3. ondragover 当拖着文件悬空的时候
+		4. ondrop 当释放的时候
+			注意：要阻止 ondragover
+		文件信息
+		var oFile=ev.dataTransfer.files[0];
+			oFile.name;
+			oFile.size;
+			oFile.lastModifiedDate;
+			oFile.type;
+				text/plain
+				text/html
+				image/jpeg
+				image/png
+	*/
+	this.oDiv=document.querySelector('div');
+	this.timer=null;
+	this.oP=document.querySelector('p');
+	this.init();
+}
+
+DragFile.prototype.init=function (){
+	// 1. 文件悬空时显示
+	var _this=this;
+	document.ondragover=function (){
+		clearTimeout(_this.timer);
+		_this.oDiv.style.display='block';
+		
+		// 2. 离开时候消失
+		_this.timer=setTimeout(function (){
+			_this.oDiv.style.display='none';	
+		}, 300);
+	};
+	
+	// 3. 当拖着进入到框里面时，文字变化
+	_this.oDiv.ondragenter=function (){
+		_this.oDiv.innerHTML='释放鼠标';
+	};
+	
+	// 4. 离开框，文字变回去
+	_this.oDiv.ondragleave=function (){
+		_this.oDiv.innerHTML='请将文件拖拽此处！';	
+	};
+	
+	// 6. 释放鼠标时，需要阻止 ondragover, 才能执行 ondrop
+	_this.oDiv.ondragover=function (){
+		return false;	
+	};
+	
+	// 5. 释放鼠标
+	_this.oDiv.ondrop=function (ev){
+		// 目前只拖着一个文件
+		var oFile=ev.dataTransfer.files[0];
+		var type=oFile.type.split('/')[1]; // text/plain
+		
+		switch(type)
+		{
+			case 'plain':
+				_this.oP.innerHTML='文件名称:'+oFile.name+'<br>'+
+							 '文件大小:'+oFile.size+'KB<br>'+
+							 '文件类型:<img src="images/wjtz_plain.png">';
+				break;
+			case 'html':
+				_this.oP.innerHTML='文件名称:'+oFile.name+'<br>'+
+							 '文件大小:'+oFile.size+'KB<br>'+
+							 '文件类型:<img src="images/wjtz_html.png">';
+				break;	
+		}
+		// 释放鼠标时，浏览器自动打开文档内容.阻止默认事件
+		return false;
+	};
+	
+		
+};
+window.onload=function (){
+	var d=new DragFile();
+	d.init();
+};
+</script>
+</head>
+
+<body>
+	<p></p>
+	<div>请将文件拖拽此处！</div>
+</body>
+</html>

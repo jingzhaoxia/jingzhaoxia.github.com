@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style>
+* { margin:0; padding:0; }
+body { overflow:hidden; }
+.btn {
+	z-index:100;
+	 position:absolute; top:100px; left:100px; padding:10px 20px; font-size:20px; }
+.login { position:absolute; top:50%; left:50%; margin-top:-100px; margin-left:-150px; width:300px; height:200px; line-height:50px; text-align:center; border:1px solid #ccc; background:#eee;
+	/*
+		放大
+	*/
+	transform:scale(5); /*缩放没有单位，是倍数*/
+	opacity:0;
+	transition:1s all ease;
+	display:none;
+}
+</style>
+<script>
+	function Login()
+	{
+		this.oBtn=document.querySelector('.btn');
+		this.oLogin=document.querySelector('.login');
+		this.close=document.querySelector('a');
+		this.init();
+	}
+	
+	Login.prototype.init=function (){
+		var _this=this;
+		this.oBtn.onclick=function (){
+			_this.show();
+		};
+		
+		this.close.onclick=function (){
+			_this.hiden();	
+		};
+	};
+	
+	Login.prototype.show=function(){
+		this.oLogin.style.display='block';
+		var _this=this;
+		setTimeout(function (){
+			// block 没有运动区间，所以改用 opacity
+			// _this.oLogin.style.display='block';
+			_this.oLogin.style.opacity=1; // 注意层级问题
+			_this.oLogin.style.transform='scale(1)';		
+		}, 0);
+	};
+	
+	Login.prototype.hiden=function (){
+		this.oLogin.style.opacity=0; // 注意层级问题
+		this.oLogin.style.transform='scale(5)';	
+		
+		/*
+			用定时器，一会儿就让其为none
+		*/ 
+		var _this=this;
+		setTimeout(function (){
+			_this.oLogin.style.display='none';	
+		}, 2000);
+	};
+	
+window.onload=function (){
+	new Login();
+};
+</script>
+</head>
+
+<body>
+	<input type="button" value="登录" class="btn">
+	<div class="login">
+    	user:<input type="text" ><br>
+        pass:<input type="password"><br>
+        <input type="button" value="登录">
+        <a href="javascript:;">×</a>
+    </div>
+</body>
+</html>
