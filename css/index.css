@@ -1,0 +1,146 @@
+@charset "utf-8";
+/* CSS Document */
+body{/* background:#fff; */opacity:0.8; }
+.wrap{ width:1349px; margin:0 auto; position:relative; }
+.head-bg{ background: rgba(255,255,255,0.8); position: fixed; top: 0; left: 0; width: 100%; z-index: 10; } 
+.head{ width:1220px; height:50px; margin:0 auto; padding:10px; }
+h1{ width:170px; height:49px; background:url(../images/logo.png) no-repeat -18px -5px; text-indent:-9999em; background-size:conver; }
+.head .menu{ width:123px; height:32px; 
+    margin-top: 12px; overflow:hidden; }
+.head .menu a{ height:32px; background:url(../images/menu.png) no-repeat; display:block; transition:.4s all ease; }
+.head .menu a:hover{ background-position:0 -32px; }
+/*--------------------------------------------------------------------*/
+/* 首页 */
+section { }
+
+@-webkit-keyframes phone{
+	to{ top:450px; opacity:1; }
+}
+@-moz-keyframes phone{
+	to{ top:450px; opacity:1; }
+}
+@-ms-keyframes phone{
+	to{ top:450px; opacity:1; }
+}
+
+@-webkit-keyframes shadow{
+	to{ opacity:1; }	
+}
+@-moz-keyframes shadow{
+	to{ opacity:1; }	
+}
+@-ms-keyframes shadow{
+	to{ opacity:1; }	
+}
+
+@-webkit-keyframes big-tree {
+	to{ top:-80px;opacity:1;  }	
+}
+@-moz-keyframes big-tree {
+	to{ top:-80px;opacity:1;  }	
+}
+@-ms-keyframes big-tree {
+	to{ top:-80px;opacity:1;  }	
+}
+
+@-webkit-keyframes small-tree {
+	to{ top:-60px; opacity:1;  }	
+}
+@-moz-keyframes small-tree {
+	to{ top:-60px; opacity:1;  }	
+}
+@-ms-keyframes small-tree {
+	to{ top:-60px; opacity:1;  }	
+}
+
+@-webkit-keyframes other-tree {
+	to{ top:-50px; opacity:1;  }	
+}
+@-moz-keyframes other-tree {
+	to{ top:-50px; opacity:1;  }	
+}
+@-ms-keyframes other-tree {
+	to{ top:-50px; opacity:1;  }	
+}
+
+.home-page  { padding-top:50px;}
+.h-cont{ position:relative; margin:0 auto; width:1220px; height:100%; background:#fff url(../images/index/index_bg.jpg) center 200px no-repeat; background-size:contain; }
+/*手机*/
+.h-phone { position:absolute; top:0; left:50%; opacity:0; margin-left:-415px; background:url(../images/index/phone.png) no-repeat; width:829px; height:57px; -webkit-animation:1s phone ease forwards;-moz-animation:1s phone ease forwards;-ms-animation:1s phone ease forwards; }
+.phone-shadow { opacity:0; position:absolute; bottom:-45px; left:0; width:792px; height:41px;  background:url(../images/index/shadow.png) no-repeat; }
+
+.big-tree { opacity:0; position:absolute; top:0; /*top:-80px;*/ right:125px; background:url(../images/index/big_tree.png) no-repeat; width: 70px; height:180px; /*-webkit-animation:1s big-tree ease forwards;*/}
+.small-tree { opacity:0;  position:absolute; top:0; /*top:-60px;*/ left:120px; background:url(../images/index/small_tree.png) no-repeat; width:45px; height:70px; }
+.other-tree { opacity:0;  position:absolute; top:0; /* top:-50px;*/ left:75px; background:url(../images/index/other_tree.png) no-repeat; width:695px; height:82px;  }
+
+/* 视频 */
+@-webkit-keyframes video{
+	to { opacity:1; }
+}
+.h-video { opacity:0; position:absolute; top:100px; left:50%; margin-left:-250px; width:500px; height:302px;}
+
+/* 齿轮 */
+@-webkit-keyframes gear{
+	to{ transform:rotate(360deg); }	
+}
+@-moz-keyframes gear{
+	to{ transform:rotate(360deg); }	
+}
+@-ms-keyframes gear{
+	to{ transform:rotate(360deg); }	
+}
+.h-gear { position:absolute; top:100px; left:20px; background:url(../images/index/gear.png) no-repeat; width:169px; height:169px; 
+	-webkit-animation-name:gear;
+	-webkit-animation-duration:5s;
+	-webkit-animation-timing-function:linear;
+	-webkit-animation-iteration-count:infinite;
+	-moz-animation:5s gear linear infinite;
+	-ms-animation:5s gear linear infinite;
+}
+/* 飞鸽 */
+@-webkit-keyframes dove{
+	0 { top:-100px; left:-200px; -webkit-transform:rotate(40deg); }
+	25% { top:20px; left:0; -webkit-transform:rotate(40deg); }
+	50% { top:200px; left:300px; -webkit-transform:rotate(40deg); }
+	75% { top:150px; left:600px; -webkit-transform:rotate(40deg); }
+	100% {top:100px; left:900px; -webkit-transform:rotateY(180deg); }	
+}
+/*@-webkit-keyframes dove-shake {
+	0 { top:100px; left:900px; -webkit-transform:rotateZ(180deg); }	
+	25% { top:100px; left:900px; -webkit-transform:rotateZ(190deg); }	
+	50% { top:100px; left:900px; -webkit-transform:rotateZ(200deg); }	
+	75% { top:100px; left:900px; -webkit-transform:rotateZ(190deg); }	
+	100% { top:100px; left:900px; -webkit-transform:rotateZ(180deg); }	
+}
+*/.h-dove { position:absolute;/* top:-100px; left:-200px;*/ width:266px; height:181px;  background:url(../images/index/dove.png) no-repeat;   -webkit-animation:.8s dove ease forwards;}
+
+
+/* 飘落 */
+/*@-webkit-keyframes falling {
+	0 { top:0; left:0; -webkit-transform:rotate(0); opacity:0; }
+	25% { top:150px; left:150px; -webkit-transform:rotate(15deg); opacity:0.4; }	
+	50% { top:250px; left:250px; -webkit-transform:rotate(10deg);  opacity:0.4; }	
+	75% { top:350px; left:350px; -webkit-transform:rotate(15deg);  opacity:0.4; }	
+	100% { top:400px; left:400px; -webkit-transform:rotate(0);  opacity:0; }	
+}
+
+.h-falling { position:absolute;  background:url(../images/index/falling.png) no-repeat; width:639px; height:112px; -webkit-animation:4s falling ease infinite; }
+
+*/
+/*@-webkit-keyframes f1 {
+	0 { top:0; left:0; -webkit-transform:rotate(0); opacity:0; }
+	25% { top:150px; left:150px; -webkit-transform:rotate(15deg); opacity:0.4; }	
+	50% { top:250px; left:250px; -webkit-transform:rotate(10deg);  opacity:0.4; }	
+	75% { top:350px; left:350px; -webkit-transform:rotate(15deg);  opacity:0.4; }	
+	100% { top:400px; left:400px; -webkit-transform:rotate(0);  opacity:1; }	
+}*/
+.h-falling .f1 { position:absolute; background:url(../images/index/f1.png) no-repeat; width:46px; height:49px; /*-webkit-animation:4s f1 ease infinite;*/ }
+.h-falling .f2 { position:absolute; background:url(../images/index/f2.png) no-repeat; width:49px; height:32px;  }
+.h-falling .f3 { position:absolute; background:url(../images/index/f3.png) no-repeat; width:61px; height:25px;  }
+.h-falling .f4 { position:absolute; background:url(../images/index/f4.png) no-repeat; width:60px; height:66px;  }
+
+
+
+
+
+
