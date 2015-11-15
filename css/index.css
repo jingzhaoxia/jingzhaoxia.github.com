@@ -139,6 +139,14 @@ section { }
 .h-falling .f3 { position:absolute; background:url(../images/index/f3.png) no-repeat; width:61px; height:25px;  }
 .h-falling .f4 { position:absolute; background:url(../images/index/f4.png) no-repeat; width:60px; height:66px;  }
 
+/* 文字 */
+.h-text { position:absolute; top:20px; left:50%; margin-left:-278px;  }
+.h-text div { float:left; padding:0 4px;}
+
+
+
+
+
 
 
 
