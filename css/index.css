@@ -1,26 +1,39 @@
 @charset "utf-8";
-/* CSS Document */
-body{/* background:#fff; */opacity:0.8; }
-.wrap{ width:1349px; margin:0 auto; position:relative; }
+/* 头部 */
+.wrap{ width:1000px; height:100%; margin:0 auto; position:relative; }
 .head-bg{ background: rgba(255,255,255,0.8); position: fixed; top: 0; left: 0; width: 100%; z-index: 10; } 
-.head{ width:1220px; height:50px; margin:0 auto; padding:10px; }
-h1{ width:170px; height:49px; background:url(../images/logo.png) no-repeat -18px -5px; text-indent:-9999em; background-size:conver; }
-.head .menu{ width:123px; height:32px; 
-    margin-top: 12px; overflow:hidden; }
-.head .menu a{ height:32px; background:url(../images/menu.png) no-repeat; display:block; transition:.4s all ease; }
-.head .menu a:hover{ background-position:0 -32px; }
+.head{ position:relative; width:1000px;height:50px; margin:0 auto; padding:10px; padding-bottom:0; }
+h1{ width:170px; height:49px; background:url(../images/logo.png) no-repeat; text-indent:-9999em; background-size:contain; }
+.head .menu{ position:absolute; top:0; right:0; padding-right: 12px; padding-top:12px; overflow:hidden; }
+/*.head .menu a{  background:url(../images/jing.png) no-repeat; display:block; 
+	transition:.4s all ease; 
+	width:80px; height:80px;  background-size:contain;
+}*/
+/*.head .menu a:hover{ background-position:0 -32px; }
+*//*-------------------------导航条 start-------------------------*/
+.g-menu { overflow:hidden; }
+.g-menu ul li { cursor:pointer; position:relative; float:left; text-align:center; padding:0 10px; width:80px; height:40px; line-height:40px; color:#056561; text-shadow:0 0 1px #fff; }
+.g-menu ul li span { position:absolute; top:0; left:0; width:100%; height:100%; z-index:10; }
+.g-menu ul li em {  position:absolute; bottom:0; left:0; width:100%; height:0; } 
+@-webkit-keyframes nav{
+	to{ height:100%;}	
+}
+.g-menu ul li:hover em,
+.g-menu ul li.active em { -webkit-animation:.5s nav ease-in forwards; } 
+/*-------------------------导航条 end-------------------------*/
+
 /*--------------------------------------------------------------------*/
+
 /* 首页 */
-section { }
 
 @-webkit-keyframes phone{
-	to{ top:450px; opacity:1; }
+	to{ top:500px; opacity:1; }
 }
 @-moz-keyframes phone{
-	to{ top:450px; opacity:1; }
+	to{ top:500px; opacity:1; }
 }
 @-ms-keyframes phone{
-	to{ top:450px; opacity:1; }
+	to{ top:500px; opacity:1; }
 }
 
 @-webkit-keyframes shadow{
@@ -63,13 +76,16 @@ section { }
 	to{ top:-50px; opacity:1;  }	
 }
 
-.home-page  { padding-top:50px;}
-.h-cont{ position:relative; margin:0 auto; width:1220px; height:100%; background:#fff url(../images/index/index_bg.jpg) center 200px no-repeat; background-size:contain; }
+.h-cont{ position:relative; margin:0 auto; height:100%; background:#fff url(../images/index/index_bg.jpg) center 200px no-repeat; background-size:contain; }
 /*手机*/
-.h-phone { position:absolute; top:0; left:50%; opacity:0; margin-left:-415px; background:url(../images/index/phone.png) no-repeat; width:829px; height:57px; -webkit-animation:1s phone ease forwards;-moz-animation:1s phone ease forwards;-ms-animation:1s phone ease forwards; }
+.h-phone { position:absolute; top:0; left:50%; opacity:0; margin-left:-415px; background:url(../images/index/phone.png) no-repeat; width:829px; height:57px; 
+	-webkit-animation:1s phone ease forwards;
+	-moz-animation:1s phone ease forwards;
+	-ms-animation:1s phone ease forwards; 
+}
 .phone-shadow { opacity:0; position:absolute; bottom:-45px; left:0; width:792px; height:41px;  background:url(../images/index/shadow.png) no-repeat; }
 
-.big-tree { opacity:0; position:absolute; top:0; /*top:-80px;*/ right:125px; background:url(../images/index/big_tree.png) no-repeat; width: 70px; height:180px; /*-webkit-animation:1s big-tree ease forwards;*/}
+.big-tree { opacity:0; position:absolute; top:0; /*top:-80px;*/ right:125px; background:url(../images/index/big_tree.png) no-repeat; width: 70px; height:180px; }
 .small-tree { opacity:0;  position:absolute; top:0; /*top:-60px;*/ left:120px; background:url(../images/index/small_tree.png) no-repeat; width:45px; height:70px; }
 .other-tree { opacity:0;  position:absolute; top:0; /* top:-50px;*/ left:75px; background:url(../images/index/other_tree.png) no-repeat; width:695px; height:82px;  }
 
@@ -77,7 +93,7 @@ section { }
 @-webkit-keyframes video{
 	to { opacity:1; }
 }
-.h-video { opacity:0; position:absolute; top:100px; left:50%; margin-left:-250px; width:500px; height:302px;}
+.h-video { opacity:0; position:absolute; top:180px; left:50%; margin-left:-250px; width:500px; height:302px; }
 
 /* 齿轮 */
 @-webkit-keyframes gear{
@@ -98,54 +114,71 @@ section { }
 	-ms-animation:5s gear linear infinite;
 }
 /* 飞鸽 */
-@-webkit-keyframes dove{
+@-webkit-keyframes -dove{
 	0 { top:-100px; left:-200px; -webkit-transform:rotate(40deg); }
 	25% { top:20px; left:0; -webkit-transform:rotate(40deg); }
 	50% { top:200px; left:300px; -webkit-transform:rotate(40deg); }
 	75% { top:150px; left:600px; -webkit-transform:rotate(40deg); }
 	100% {top:100px; left:900px; -webkit-transform:rotateY(180deg); }	
 }
-/*@-webkit-keyframes dove-shake {
-	0 { top:100px; left:900px; -webkit-transform:rotateZ(180deg); }	
-	25% { top:100px; left:900px; -webkit-transform:rotateZ(190deg); }	
-	50% { top:100px; left:900px; -webkit-transform:rotateZ(200deg); }	
-	75% { top:100px; left:900px; -webkit-transform:rotateZ(190deg); }	
-	100% { top:100px; left:900px; -webkit-transform:rotateZ(180deg); }	
-}
-*/.h-dove { position:absolute;/* top:-100px; left:-200px;*/ width:266px; height:181px;  background:url(../images/index/dove.png) no-repeat;   -webkit-animation:.8s dove ease forwards;}
 
+.h-dove { position:absolute; top:150px; right:-40px; background:url(../images/index/dove.png) no-repeat;-webkit-transform:rotateY(180deg); width:257px; height:175px; background-size:contain;  }
+/*.h-dove { position:absolute; top:0; left:0;}*/
 
-/* 飘落 */
-/*@-webkit-keyframes falling {
-	0 { top:0; left:0; -webkit-transform:rotate(0); opacity:0; }
-	25% { top:150px; left:150px; -webkit-transform:rotate(15deg); opacity:0.4; }	
-	50% { top:250px; left:250px; -webkit-transform:rotate(10deg);  opacity:0.4; }	
-	75% { top:350px; left:350px; -webkit-transform:rotate(15deg);  opacity:0.4; }	
-	100% { top:400px; left:400px; -webkit-transform:rotate(0);  opacity:0; }	
-}
+/*.dove-arc {  position:absolute; top:-500px; left:50%; width:1000px; height:1000px; border-radius:50%; border:1px solid red;  }*/
 
-.h-falling { position:absolute;  background:url(../images/index/falling.png) no-repeat; width:639px; height:112px; -webkit-animation:4s falling ease infinite; }
-
-*/
-/*@-webkit-keyframes f1 {
-	0 { top:0; left:0; -webkit-transform:rotate(0); opacity:0; }
-	25% { top:150px; left:150px; -webkit-transform:rotate(15deg); opacity:0.4; }	
-	50% { top:250px; left:250px; -webkit-transform:rotate(10deg);  opacity:0.4; }	
-	75% { top:350px; left:350px; -webkit-transform:rotate(15deg);  opacity:0.4; }	
-	100% { top:400px; left:400px; -webkit-transform:rotate(0);  opacity:1; }	
-}*/
-.h-falling .f1 { position:absolute; background:url(../images/index/f1.png) no-repeat; width:46px; height:49px; /*-webkit-animation:4s f1 ease infinite;*/ }
-.h-falling .f2 { position:absolute; background:url(../images/index/f2.png) no-repeat; width:49px; height:32px;  }
-.h-falling .f3 { position:absolute; background:url(../images/index/f3.png) no-repeat; width:61px; height:25px;  }
-.h-falling .f4 { position:absolute; background:url(../images/index/f4.png) no-repeat; width:60px; height:66px;  }
 
 /* 文字 */
-.h-text { position:absolute; top:20px; left:50%; margin-left:-278px;  }
+.h-text { position:absolute; top:100px; left:50%; margin-left:-278px;  }
 .h-text div { float:left; padding:0 4px;}
 
+/*------------------------------作品展示 start----------------------------*/
+.w-cont { position:relative; height:100%; background:url(../images/work/bg.jpg) center center no-repeat; background-size:contain; }
+.w-left-shadow { position:absolute; top:60px; left:0; background:url(../images/work/b_3_2.png) no-repeat; width:143px; height:142px; }
 
+/* 左下角的鸽子 */
+@-webkit-keyframes w-dove{
+	to{  top:300px; left:-140px; opacity:1; }	
+}
+.w-dove { position:absolute; top:0; left:0; opacity:0; background:url(../images/work/a_2.png) no-repeat; width:266px; height:181px; 
+	-webkit-animation:0.4s w-dove ease forwards;
+ }
+ 
+ /* 右边的人 */
+.w-person {  position:absolute; top:80px; right:0; background:url(../images/work/c_3.png) no-repeat;background-size:contain; width:271px; height:532px; }
+.w-per-boll { background:url(../images/work/ball.png) no-repeat; width:74px; height:72px; }
 
+.w-show { position:absolute; top:50px; left:150px; width:700px; height:100%; }
+.w-show .s1,
+.w-show .s3 { position:absolute;  background:url(../images/work/c_9.png) no-repeat; width:338px; height:292px; background-size:contain; }
+.w-show .s2,
+.w-show .s4 { position:absolute;  background:url(../images/work/c_9_1.png) no-repeat; width:338px; height:292px; background-size:contain; }
 
+.w-show .s1 { top:10px; left:0; }
+.w-show .s2 { top:10px; right:140px; } 
+.w-show .s3 { top:320px; left:-60px; } 
+.w-show .s4 { top:320px; right:200px; } 
+.w-tit { position:absolute; bottom:20px; right:100px; background:url(../images/work/show.png) no-repeat; background-size:contain; width:307px; height:252px; }
+/*------------------------------作品展示 end------------------------------*/
+/*------------------------------手机端 start------------------------------*/
+.m-cont { width:100%; height:100%; position:relative; }
+.m-picture { width:100%; height:100%; background:url(../images/m_bg.jpg) no-repeat; }
+/* 照片环 */
+.m-pic { position:absolute; top:25%; left:50%; margin-left:-44px; width:87px; height:180px; /*background:url(../images/iphone.png) no-repeat; background-size:contain;*/  transform:perspective(1200px) rotateX(-10deg); transform-style:preserve-3d;}
+.m-pic li { position:absolute; top:0; left:0; width:100%; height:100%;background:url(../images/iphone.png) no-repeat; transition:1s all ease; border-radius:8px; box-shadow:0 0 10px 2px #fff; -webkit-box-reflect:below 10px -webkit-linear-gradient(rgba(0,0,0,0), rgba(0,0,0,.5)); background-size:cover; }
+
+.m-gear { position:absolute; bottom:0; right:0; background:url(../images/c_3.png) no-repeat; background-size:contain; width:170px; height:170px;}
+/*------------------------------手机端 end-------------------------------*/
+/*------------------------------联系我们 start---------------------------*/
+#c-map { margin-top:80px; width:100%; height:350px; border:1px solid #ccc; }
+
+.g-contact ul { display:-webkit-box; padding-top:30px; }
+.g-contact ul li {padding-left:120px;line-height:100px; font-size:20px; font-family:'微软雅黑';  -webkit-box-flex:1; width:100px; height:100px; }
+.g-contact ul li:nth-child(1) { background:url(../images/phone.png) no-repeat;  background-size:contain; }
+.g-contact ul li:nth-child(2) { background:url(../images/email.png) no-repeat; background-size:contain; }
+.g-contact ul li:nth-child(3) { background:url(../images/weixin.png) no-repeat;background-size:contain; margin-left:60px;}
+.g-contact ul li em { }
+/*------------------------------联系我们 end---------------------------*/
 
 
 

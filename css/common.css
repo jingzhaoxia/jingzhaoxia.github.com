@@ -16,5 +16,5 @@ textarea{ outline:none; resize:none; }
 .fr{ float:right; display:inline; }
 
 /*公共部分的样式*/
-body{ background:url(../images/bg.jpg) no-repeat; }
-
+/*body{ background:url(../images/bg.jpg) no-repeat; }
+*/
