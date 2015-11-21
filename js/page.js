@@ -8,7 +8,8 @@ $(function(){
 	var iNow=0; // 当前显示的
 	var bReady=true; // 默认是准备好的
 	window.location.hash=iNow;
-	
+	index();
+
 	function toUp()
 	{
 		iNow++;
@@ -32,6 +33,9 @@ $(function(){
 		oSection.css('transform','translateY(-'+(iNow*100)+'%)');
 		// 将当前显示的第几屏幕存入 locaStorage
 		window.location.hash=iNow;
+		index();
+		introduce();
+		works();
 		ring();
 	}
 	function change(index,elem)

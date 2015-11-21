@@ -1,52 +1,20 @@
 'use strict';
 
-$(function (){
-	
-	
-	// 鼠标右键
-	;(function (){
-		var oContextMenu=$('#g-context');
-		$(document).on('contextmenu',function(ev){
-			var _ev=ev;
-			$.ajax({
-				url:'context-menu.html',
-				success:function (str){
-					/*oContextMenu.html(str);
-					// operContext(_ev);
-					
-					var oC=$('.g-context');
-					var oUl=$('.menu-list');
-					var aLi=oUl.children();
-					var h=aLi.length*(aLi.eq(0).outerHeight()+10+2);
-					console.log(aLi.eq(0).outerHeight());
-					oC.show().css({
-						left:_ev.clientX+'px',
-						top:_ev.clientY+'px'
-					});
-					oC.stop().animate({
-						height:h+'px',
-						opacity:1	
-					}, 800, 'bounce');
-					*/
-
-				}	
-			});
-			
-			/*$(document).on('click',function (){
-				oC.hide && oC.hide();	
-			});*/
-			// return false;
-		});
-		
-		function operContext(ev)
-		{
-			
-		}
-	})();
-	
-	
+function index()
+{
+	var iNow=window.location.hash.substring(1);
+	if(iNow!=0) 
+	{
+		_backIndex();
+		return;	
+	}	
+	var oBox=document.querySelector('.h-cont');
+	oBox.style.display='block';	
+	_shadow();
+	_video();
 	// 手机运动完了，阴影出现
-	;(function (){
+	function _shadow()
+	{
 		var oPhone=document.querySelector('.h-phone');
 		var oShadow=oPhone.querySelector('.phone-shadow');
 		var oBigTree=oPhone.querySelector('.big-tree');
@@ -60,10 +28,11 @@ $(function (){
 			setStyle3(oSmallTree, 'animation', '1s small-tree ease forwards');
 			setStyle3(oOtherTree, 'animation', '1s other-tree ease forwards');
 		}, false);
-	})();
+	}
 	
 	// 添加视频
-	;(function (){
+	function _video()
+	{
 		var oOtherTree=$('.other-tree');
 		var oV=$('.h-video');
 		$.ajax({
@@ -76,10 +45,18 @@ $(function (){
 		oOtherTree[0].addEventListener('animationend',function (){
 			setStyle3(oV[0], 'animation', '1s video ease forwards');
 		}, false);
-	})();
+	}
 	
-
-});
+	// 走了就消失
+	function _backIndex()
+	{
+		setTimeout(function (){
+			var oBox=document.querySelector('.h-cont');
+			oBox.style.display='none';	
+		}, 300);
+	}
+	
+}
 
 
 

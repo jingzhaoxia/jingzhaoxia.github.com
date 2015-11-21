@@ -108,8 +108,79 @@ function isFF()
 		return false; 	
 	}
 }
+/**
+ * 角度转换成弧度
+ * @param d number 角度
+ * return a number 弧度
+ */
+function d2a(d)
+{
+	return d*180/Math.PI;
+}
 
- 
+/**
+ * over
+ * @param obj    object  	被添加 over 事件的对象
+ * @param fn    function	添加 over 后所执行的函数
+ *
+ * 	解决：在元素内部的子元素和父元素之间也触发 over 事件
+ *	注意：
+ *		调用 fn 时。将 操作对象 this 和 事件对象ev 传参。
+ *		所以在定义时。可拿到 当前操作的对象 this 和 其事件对象
+ */
+function mouseenter(obj, fn)
+{
+	if(obj.onmouseenter)
+	{
+		obj.onmouseenter=function(ev){
+			fn.call(this, ev);	
+		};	
+	}
+	else
+	{
+		obj.onmouseover=function (ev){
+			var oEvent=ev || event; 	
+			var oFrom=oEvent.fromElement || oEvent.relatedTarget; 
+			
+			if( ! (oFrom && obj.contains(oFrom)))
+			{
+				fn.call(this, ev);	
+			}
+		};	
+	}
+}
+
+/**
+ * out
+ * @param obj    object  	被添加 out 事件的对象
+ * @param fn    function	添加 out 后所执行的函数
+ *
+ * 	解决：在元素内部的子元素和父元素之间也触发 out 事件
+ *	注意：
+ *		调用 fn 时。将 操作对象 this 和 事件对象ev 传参。
+ *		所以在定义时。可拿到 当前操作的对象 this 和 其事件对象
+ */
+function mouseleave(obj, fn)
+{
+	if(obj.onmouseleave)
+	{
+		obj.onmouseleave=function (ev){
+			fn.call(this, ev);
+		};	
+	}
+	else
+	{
+		obj.onmouseout=function (ev){
+			var oEvent=ev || event;
+			var oTo=oEvent.toElement || oEvent.relatedElement; 
+			
+			if( ! (oTo && obj.contains(oTo)))
+			{
+				fn.call(this, ev);	
+			}
+		};		
+	}
+}
  
  
  

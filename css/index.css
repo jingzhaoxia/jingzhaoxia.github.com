@@ -132,40 +132,17 @@ h1{ width:170px; height:49px; background:url(../images/logo.png) no-repeat; text
 .h-text { position:absolute; top:100px; left:50%; margin-left:-278px;  }
 .h-text div { float:left; padding:0 4px;}
 
-/*------------------------------作品展示 start----------------------------*/
-.w-cont { position:relative; height:100%; background:url(../images/work/bg.jpg) center center no-repeat; background-size:contain; }
-.w-left-shadow { position:absolute; top:60px; left:0; background:url(../images/work/b_3_2.png) no-repeat; width:143px; height:142px; }
-
-/* 左下角的鸽子 */
-@-webkit-keyframes w-dove{
-	to{  top:300px; left:-140px; opacity:1; }	
-}
-.w-dove { position:absolute; top:0; left:0; opacity:0; background:url(../images/work/a_2.png) no-repeat; width:266px; height:181px; 
-	-webkit-animation:0.4s w-dove ease forwards;
- }
- 
- /* 右边的人 */
-.w-person {  position:absolute; top:80px; right:0; background:url(../images/work/c_3.png) no-repeat;background-size:contain; width:271px; height:532px; }
-.w-per-boll { background:url(../images/work/ball.png) no-repeat; width:74px; height:72px; }
-
-.w-show { position:absolute; top:50px; left:150px; width:700px; height:100%; }
-.w-show .s1,
-.w-show .s3 { position:absolute;  background:url(../images/work/c_9.png) no-repeat; width:338px; height:292px; background-size:contain; }
-.w-show .s2,
-.w-show .s4 { position:absolute;  background:url(../images/work/c_9_1.png) no-repeat; width:338px; height:292px; background-size:contain; }
-
-.w-show .s1 { top:10px; left:0; }
-.w-show .s2 { top:10px; right:140px; } 
-.w-show .s3 { top:320px; left:-60px; } 
-.w-show .s4 { top:320px; right:200px; } 
-.w-tit { position:absolute; bottom:20px; right:100px; background:url(../images/work/show.png) no-repeat; background-size:contain; width:307px; height:252px; }
-/*------------------------------作品展示 end------------------------------*/
 /*------------------------------手机端 start------------------------------*/
 .m-cont { width:100%; height:100%; position:relative; }
 .m-picture { width:100%; height:100%; background:url(../images/m_bg.jpg) no-repeat; }
 /* 照片环 */
 .m-pic { position:absolute; top:25%; left:50%; margin-left:-44px; width:87px; height:180px; /*background:url(../images/iphone.png) no-repeat; background-size:contain;*/  transform:perspective(1200px) rotateX(-10deg); transform-style:preserve-3d;}
 .m-pic li { position:absolute; top:0; left:0; width:100%; height:100%;background:url(../images/iphone.png) no-repeat; transition:1s all ease; border-radius:8px; box-shadow:0 0 10px 2px #fff; -webkit-box-reflect:below 10px -webkit-linear-gradient(rgba(0,0,0,0), rgba(0,0,0,.5)); background-size:cover; }
+
+/* 按钮 */
+.m-btn { position:absolute; bottom:0; left:0; width:100%; height:192px; overflow:hidden;}
+.m-left { float:right; background:url(../images/left.png) no-repeat;  width:174px; height:128px; background-size:contain; cursor:pointer; }
+.m-right { float:left; background:url(../images/right.png) no-repeat;  width:261px; height:192px; background-size:contain; cursor:pointer; }
 
 .m-gear { position:absolute; bottom:0; right:0; background:url(../images/c_3.png) no-repeat; background-size:contain; width:170px; height:170px;}
 /*------------------------------手机端 end-------------------------------*/

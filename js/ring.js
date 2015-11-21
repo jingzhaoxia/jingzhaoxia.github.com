@@ -5,11 +5,12 @@ if(iNow!=3) return;
 _ring();*/
 function ring()
 {
-	var iNow=window.location.hash.substring(1);
 	var oUl=$('.m-pic');
+	var oLeft=document.querySelector('#m-left');
+	var oRight=document.querySelector('#m-right');
 	var N=8;
 	var y=0;
-
+	var iNow=window.location.hash.substring(1);
 	if(iNow!=3) 
 	{
 		_ringBack();
@@ -56,6 +57,16 @@ function ring()
 				}	
 			};
 			
+			
+			// 左边
+			oLeft.onclick=function (){
+					y-=360/N;
+					change();	
+			};
+			oRight.onclick=function (){
+					y+=360/N;
+					change();
+			};
 		}
 	}
 	

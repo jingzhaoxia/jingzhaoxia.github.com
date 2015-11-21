@@ -1,0 +1,48 @@
+@charset "utf-8";
+/* 作品展示 */
+/*------------------------------作品展示 start----------------------------*/
+.w-cont { position:relative; height:100%; background:url(../images/work/bg.jpg) center center no-repeat; background-size:contain; }
+.w-left-shadow { position:absolute; top:60px; left:0; background:url(../images/work/b_3_2.png) no-repeat; width:143px; height:142px; }
+
+/* 左下角的鸽子 */
+@-webkit-keyframes w-dove{
+	to{  top:300px; left:-140px; opacity:1; }	
+}
+.w-dove { position:absolute; top:0; left:0; opacity:0; background:url(../images/work/a_2.png)  no-repeat; width:266px; height:181px; 
+	-webkit-animation:0.4s w-dove ease forwards;
+ }
+ 
+ 
+ /* 左边的按钮 */
+.w-left-btn { position:absolute; bottom:10%; left:10%;  background:url(../images/work/b_4_5.png) no-repeat; width:57px; height:54px; }
+.w-left { position:absolute; top:-200px; left:-50%; width:84px; height:73px; background:url(../images/work/left.png) no-repeat; }
+ 
+.w-tit { position:absolute; bottom:20px; right:20px; background:url(../images/work/show.png) no-repeat; background-size:contain; width:215px; height:176px; }
+.w-tit-bg { position:absolute; top:-120px; left:100px; width:84px; height:73px; background:url(../images/work/b_4_3.png) no-repeat;  }
+/* 中间部分 */
+.w-show { /*transform:perspective(1200px) rotateX(-20deg); */ position:absolute; top:50px; left:150px; width:700px; height:100%; }
+#w-show-list { position:absolute; top:10%; left:50%; margin-left:-118px; width:236px; height:350px; /*background:url(../images/work/fff.png) no-repeat; background-size:contain;*/ }
+#w-show-list li { opacity:0; position:absolute; top:0; left:0; width:100%; height:100%; background:url(../images/work/back.png) no-repeat; background-size:contain; -webkit-box-reflect:below 10px -webkit-linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.5)); transition:2s all cubic-bezier(1, 1.49, 0, 1.31); /*transform:perspective(800px) translateX(0px) rotateY(0deg);*/ }
+#w-show-list li.l2 { opacity:0; /*transform:perspective(800px) translateX(-260px) rotateY(60deg);*/ z-index:1; }
+#w-show-list li.l1 { opacity:0.4; /*transform:perspective(800px) translateX(-180px) rotateY(60deg); */z-index:2; }
+#w-show-list li.cur { opacity:1; background-image:url(../images/work/fff.png); z-index:10;}
+#w-show-list li.r1 {opacity:0.4; /* transform:perspective(800px) translateX(180px) rotateY(-60deg);*/ z-index:2;}
+#w-show-list li.r2 { opacity:0; /*transform:perspective(800px) translateX(260px) rotateY(-60deg);*/ z-index:1;}
+
+#w-show-list li a { color:#056561; font-family:'微软雅黑'; width:206px; height:270px; margin:0 auto; margin-top:40px; display:block; overflow:hidden; font-size:14px; }
+#w-show-list li a img { width:206px; }
+#w-show-list li a p { line-height:28px;  }
+
+#w-show-list li a em { color:#fb4260; }
+
+
+
+
+
+
+
+
+
+
+
+
