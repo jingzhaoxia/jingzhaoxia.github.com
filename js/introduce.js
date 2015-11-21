@@ -73,6 +73,7 @@ function introduce()
 	function _introduce()
 	{
 		var oBox=document.querySelector('#i-box');
+		oBox.innerHTML='';
 		for(var i=0; i<data.length; i++)
 		{
 			var oTable=document.createElement('table');
