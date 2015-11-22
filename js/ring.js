@@ -31,7 +31,7 @@ function ring()
 				'margin-top':'21px',
 				'width':'75px',
 				'height':'135px',
-				'background-image':'url(http://localhost/jingzhaoxia.github.com/data/images/'+(i%2)+'.jpg)',
+				'background-image':'url(../data/images/'+(i%2)+'.jpg)',
 				'background-repeat':'no-repeat',
 				'background-size':'cover'
 			});

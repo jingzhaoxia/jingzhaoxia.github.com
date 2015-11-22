@@ -27,7 +27,7 @@ table.active { opacity:1; }
 @-webkit-keyframes i-next {
 	to{ transform: perspective(800px) rotateX(-300deg) rotateY(360deg); }	
 }
-.i-next { position:absolute; bottom:20px; left:0; width:180px; height:163px; background:url(../images/next.png) no-repeat; background-size:cover;transform: perspective(800px) rotateX(0deg) rotateY(0deg); /*-webkit-animation:2s i-next ease infinite;*/ }
+.i-next { cursor:pointer; position:absolute; bottom:20px; left:0; width:180px; height:163px; background:url(../images/next.png) no-repeat; background-size:cover;transform: perspective(800px) rotateX(0deg) rotateY(0deg); /*-webkit-animation:2s i-next ease infinite;*/ }
 /*------------------------------项目经历 end----------------------------*/
 
 
