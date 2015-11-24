@@ -47,9 +47,9 @@ function Video()
 // 初始化
 Video.prototype.init=function (){	
 	// 播放
-	this.play();
+	this.toPlay();
 	// 暂停
-	this.pause();
+	this.toPause();
 	// 停止
 	this.stop();
 	// 快进
@@ -81,13 +81,13 @@ Video.prototype.onpro=function (){
 Video.prototype.rePlay=function (){
 	var _this=this;
 	this.oV.onended=function (){
-		_this.play();
+		_this.toPlay();
 	};	
 };
 
 // 初始音量
 Video.prototype.volumeInit=function (){
-	this.oVolumeBar.style.width=this.oV.volume*100+'%';
+	this.oVolumeBar.style.width=this.oV.volume*100/8+'%';
 };
 
 // 拖拽音量
@@ -118,16 +118,10 @@ Video.prototype.volumeFlag=function (){
 
 // 总时间
 Video.prototype.getDuration=function (){
+	var _this=this;
 	this.oV.onprogress=function (){
 		_this.oDuration.innerHTML=toDub(parseInt(_this.oV.duration/60))+':'+toDub(parseInt(_this.oV.duration%60));
 	};
-	/*
-		问题？一上来获取不到时间
-	*/
-		var _this=this;
-	setTimeout(function (){
-	}, 30);
-	// this.oDuration.innerHTML=Math.ceil(this.oV.duration/60)+':'+Math.ceil(this.oV.duration%60);	
 };
 
 // 点击调整进度
@@ -157,7 +151,7 @@ Video.prototype.dragProgress=function (){
 };
 
 // 播放
-Video.prototype.play=function (){
+Video.prototype.toPlay=function (){
 	var _this=this;
 	this.oPlay.onclick=function (){
 		_this.oV.play();
@@ -167,7 +161,7 @@ Video.prototype.play=function (){
 };
 
 // 暂停
-Video.prototype.pause=function (){
+Video.prototype.toPause=function (){
 	var _this=this;
 	this.oPause.onclick=function (){
 		_this.oV.pause();
@@ -181,7 +175,7 @@ Video.prototype.stop=function (){
 	var _this=this;
 	this.oStop.onclick=function (){
 		_this.oV.currentTime=0;
-		_this.pause();	
+		_this.toPause();	
 	};
 };
 

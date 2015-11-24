@@ -10,7 +10,7 @@
  /* 右边的人 */
 .i-person { z-index:20;  position:absolute; bottom:40px; left:-30px; background:url(../images/c_3.png) no-repeat;background-size:contain; width:271px; height:532px; }
 .i-per-boll { position:absolute; top:0; right:14px; background:url(../images/ball.png) no-repeat; width:74px; height:72px; }
-.i-body {  position:absolute; bottom:-30px; left:50%; margin-left:-356px; width:712px; height:651px; }
+.i-body { -webkit-transform:perspective(800px) rotateX(10deg);transform:perspective(800px) rotateX(10deg);  position:absolute; bottom:-80px; left:50%; margin-left:-356px; width:712px; height:651px; }
 .i-pc { width:712px; height:651px;  display:block; }
 
 /* 表格 */

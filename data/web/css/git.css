@@ -1,0 +1,31 @@
+@charset "utf-8";
+/* CSS Document */
+body{ font-size:18px; font-family:微软雅黑; }
+nav{ width:100%; height:51px; position:fixed; top:0; left:0; background:#cf4646; } 
+.nav{ width:83%; margin:0 auto; line-height:51px; position:relative; }
+.nav a{ color:#fff; }
+.nav ul li{ padding:0 15px; float:left; font-size:12px; }
+
+header{ width:100%; height:308px; background:#cf4646; margin-top:51px; padding-top:67px; margin-bottom:16px; }
+.mark{ width:350px; margin:0 auto; text-align:center; }
+h1{ background:url(http://www.gulpjs.com.cn/img/gulp-white-text.svg) no-repeat; width:200px; height:121px; background-size:cover; margin:0 auto; margin-bottom:14px; }
+.mark p{ color:#fff; margin-bottom:48px; }
+.mark a{ display:inline-block; width:100px; height:40px; text-align:center; line-height:40px; border:2px solid rgba(255,255,255,0.6); color:rgba(255,255,255,0.6); }
+.mark a:hover{ border:2px solid #fff; color:#fff;}
+.menu{ width:44px; height:34px; background:url(../images/nav.png) no-repeat; display:none; position:absolute; right:15px; top:8px; }
+
+body{ color:#333; }
+section{ width:83%; margin:0 auto; }
+.box{ width:100%; }
+section .advantage{ float:left; width:45%; margin-right:38px; height:140px; padding-top:32px; }
+section .advantage h2{ margin-bottom:16px; font-size:28px;font-weight:bold; }
+section .advantage p{ line-height:25px; font-size:17px; }
+footer{ width:100%; height:60px; text-align:center; padding-top:75px; font-size:14px; color:#ccc; }
+@media (max-width:768px){
+	#ul1{ display:none}
+	.menu{ display:block;}
+	section .advantage{ width:100%; }	
+}
+
+
+

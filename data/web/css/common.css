@@ -1,0 +1,17 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*清除默认样式*/
+body, h1, h2, h3, h4, h5, h6, p, ul, li, ol, dl, dt, dd, a, i, b, em, strong, img, input{ margin:0; padding:0; }
+b, strong{ font-weight:normal; }
+i,em{ font-style:normal; }
+li{ list-style:none; }
+a{ text-decoration:none; }
+input{ border:none; background:none; outline:none; }
+textarea{ outline:none; resize:none; }
+/*清除默认样式*/
+/*公用*/
+.clearFix:after{ content:''; clear:both; display:block; }
+.clearFix{ zoom:1; }
+.fl{ float:left; display:inline; }
+.fr{ float:right; display:inline; }

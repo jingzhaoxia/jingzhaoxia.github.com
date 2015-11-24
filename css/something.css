@@ -1,0 +1,42 @@
+@charset "utf-8";
+/* 效果集锦 */
+html,body { width:100%; height:100%;  overflow-x:auto; overflow-y:hidden;  }
+/*-------------------- 头部 start --------------------*/
+.wrap { position:relative; width:1000px; height:100%; margin:0 auto; }
+.g-head { position:fixed; top:0; left:0; width:100%; z-index:10; background:rgba(222,222,222,0.2);}
+.g-head .head { width:1000px; margin:0 auto;  padding:10px; padding-bottom:0; }
+.g-head h1 { width:170px; height:49px; background:url(../images/logo.png) no-repeat; text-indent:-9999em; background-size:contain; }
+.g-head .index { width:170px; height:49px;  }
+.g-head .back { background:url(../images/something/back.png) 0 -34px no-repeat;  text-indent:-9999em;  width:87px; height:31px; -webkit-transition:0.7s all ease-in; }
+.g-head .back:hover { background-position:0 0; }
+/*-------------------- 头部 end -------------------*/
+/*-------------------- 中间 start --------------------*/
+section { width:100%; height:100%; }
+.s-cont { position:relative; width:100%; height:100%; }
+
+/* 中间展示 */
+#s-show-list { position:absolute; top:50%; left:50%; background:url(../images/something/saf.png) no-repeat; width:512px; height:410px; margin-top:-205px; margin-left:-256px; }  
+#s-show-list li { position:absolute; top:0; left:0; width:100%; height:100%; background:url(../images/something/browser.jpg) no-repeat; padding-top:42px; opacity:0; -webkit-box-reflect:below 2px -webkit-linear-gradient(rgba(0,0,0,0), rgba(0,0,0,.5)); transition:1s all ease;  transform:perspective(800px) translateX(0px) rotateY(0deg); }
+#s-show-list li.l2{ z-index:1; opacity:0; transform:perspective(800px) translateZ(-150px) translateX(-380px) rotateY(-10deg);}
+#s-show-list li.l1{ z-index:2; opacity:0.8; transform:perspective(800px) translateZ(-50px) translateX(-200px) rotateY(-10deg);}
+#s-show-list li.cur{  z-index:10; opacity:1;}
+#s-show-list li.r1{ z-index:2; opacity:0.8; transform:perspective(800px) translateZ(-50px) translateX(200px) rotateY(10deg); }
+#s-show-list li.r2{ z-index:1; opacity:0; transform:perspective(800px) translateZ(-150px) translateX(380px) rotateY(10deg);}
+
+/* 按钮 */
+.s-btn {padding:0 74px;  -webkit-box-sizing:border-box; position:absolute; bottom:50px; left:50%; margin-left:-250px; width:500px; height:50px;  text-align:center; }
+.s-show-tit { line-height:49px; height:49px; color:#056561; font-size:30px; font-family:'微软雅黑'; }
+.s-left { position:absolute; left:0; top:0; background:url(../images/something/left.png) no-repeat; width:74px; height:49px; cursor:pointer;  }
+.s-right { position:absolute; right:0; top:0; background:url(../images/something/right.png) no-repeat; width:74px; height:49px; cursor:pointer;}
+/*-------------------- 中间 end ---------------------*/
+/*-------------------- 尾部 start --------------------*/
+.g-footer { position:fixed; bottom:0; left:0; width:100%; z-index:10; background:rgba(222,222,222,0.8);}
+.g-footer .footer { width:1000px; margin:0 auto;  padding:10px; text-align:center; }
+.g-footer ul { width:600px; margin:0 auto; }
+.g-footer li { float:left; width:calc(600px / 3); font-size:18px; color:#999;  }
+.g-footer li em { margin:0 10px; }
+/*-------------------- 尾部 end -------------------*/
+
+
+
+

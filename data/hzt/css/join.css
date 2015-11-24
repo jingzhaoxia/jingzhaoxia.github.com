@@ -1,0 +1,32 @@
+@charset "utf-8";
+/* 先把它列表隐藏了 */
+.g-head .menu { display:none; }
+/* 加入我们 */
+.g-join .banner { background:#21364b; }
+.g-join .banner img { width:16rem; height:7.9rem; }
+
+.join-show { background:#f2f4f8; padding:0.875rem 0 0.875rem 1.425rem;  }
+.join-bar { height:0.875rem; width:13.15rem; background:#fff url(../images/index/cont-tit.png) 0.425rem  0.25rem no-repeat; background-size:0.2rem 0.3rem;font-size:0.65rem; color:#002947; line-height:0.875rem; padding-left:1.25rem; box-sizing:border-box;  }
+
+.join-item p { text-indent:0.8rem; font-size:0.4rem; line-height:0.75rem; font-family:'宋体';}
+.join-item li {font-size:0.4rem; font-family:'微软雅黑'; overflow:hidden; line-height:0.75rem; }
+.join-item li i { display:block; width:0.6rem; float:left; }
+.join-item li span { float:left; width:12.55rem; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

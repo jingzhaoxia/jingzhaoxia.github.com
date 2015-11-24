@@ -15,10 +15,10 @@
  
  /* 左边的按钮 */
 .w-left-btn { position:absolute; bottom:10%; left:10%;  background:url(../images/work/b_4_5.png) no-repeat; width:57px; height:54px; }
-.w-left { position:absolute; top:-200px; left:-50%; width:84px; height:73px; background:url(../images/work/left.png) no-repeat; cursor:pointer; }
+.w-left {z-index:10; position:absolute; top:-200px; left:-50%; width:84px; height:73px; background:url(../images/work/left.png) no-repeat; cursor:pointer; }
  
 .w-tit { position:absolute; bottom:20px; right:20px; background:url(../images/work/show.png) no-repeat; background-size:contain; width:215px; height:176px; }
-.w-tit-bg { position:absolute; top:-120px; left:100px; width:84px; height:73px; background:url(../images/work/b_4_3.png) no-repeat;  cursor:pointer;}
+.w-tit-bg { z-index:10; position:absolute; top:-120px; left:100px; width:84px; height:73px; background:url(../images/work/b_4_3.png) no-repeat;  cursor:pointer;}
 /* 中间部分 */
 .w-show { /*transform:perspective(1200px) rotateX(-20deg); */ position:absolute; top:50px; left:150px; width:700px; height:100%; }
 #w-show-list { position:absolute; top:10%; left:50%; margin-left:-118px; width:236px; height:350px; /*background:url(../images/work/fff.png) no-repeat; background-size:contain;*/ }

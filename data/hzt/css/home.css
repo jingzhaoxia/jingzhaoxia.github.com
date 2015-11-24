@@ -1,0 +1,28 @@
+@charset "utf-8";
+/* 先把它列表隐藏了 */
+.g-head .menu { display:none; }
+/* 加入我们 */
+.g-home .banner { background:#21364b; }
+.g-home .banner img { width:16rem; height:7.9rem; }
+
+.home-show { background:#f2f4f8; padding:0.875rem 0 0.875rem 1.425rem;  }
+.home-bar { height:0.875rem; width:13.15rem; background:#fff url(../images/index/cont-tit.png) 0.425rem  0.25rem no-repeat; background-size:0.2rem 0.3rem;font-size:0.65rem; color:#002947; line-height:0.875rem; padding-left:1.25rem; box-sizing:border-box;  }
+
+.home-item p { color:#002745; text-indent:0.8rem; font-size:0.4rem; line-height:0.8rem; font-family:'微软雅黑';}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -16,6 +16,7 @@ function works(){
 	function _works()
 	{
 		var bReady=true;
+		var timer=null;
 		
 		_show();
 		// 存 class
@@ -25,6 +26,7 @@ function works(){
 			aClass[i]=aLi[i].className;	
 		}
 		
+	
 		function toLeft()
 		{
 			aClass.unshift(aClass.pop());

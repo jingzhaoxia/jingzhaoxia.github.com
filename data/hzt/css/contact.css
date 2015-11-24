@@ -1,0 +1,18 @@
+@charset "utf-8";
+/* 先把它列表隐藏了 */
+.g-head .menu { display:none; }
+/* 加入我们 */
+.g-contact .banner { background:#21364b; }
+.g-contact .banner img { width:16rem; height:7.9rem; }
+
+.contact-show { background:#f2f4f8; padding:0.875rem 0 0.875rem 1.425rem;  }
+.contact-bar { height:0.875rem; width:13.15rem; background:#fff url(../images/index/cont-tit.png) 0.425rem  0.25rem no-repeat; background-size:0.2rem 0.3rem;font-size:0.65rem; color:#002947; line-height:0.875rem; padding-left:1.25rem; box-sizing:border-box;  }
+
+.contact-item .tit { border-bottom:1px dashed #cc0f16; width:12.7rem; padding-bottom:0.55rem; padding-top:0.9rem; font-size:0.45rem; font-family:'微软雅黑'; color:#cc0f16; }
+.cont-list { font-size:0.4rem; font-family:'微软雅黑'; color:#000000; line-height:1rem;}
+.cont-list span i { display:inline-block; height:1rem; text-indent:-9999px; padding-right:0.325rem; background-position:center center; background-repeat:no-repeat; }
+.cont-list .tel i { background-image:url(../images/contact/tel.png); background-size:0.425rem; width:0.425rem;}
+.cont-list .person i { background-image:url(../images/contact/person.png); background-size:0.45rem 0.8rem; width:0.45rem;}
+.cont-list .phone i { background-image:url(../images/contact/phone.png); background-size:0.35rem 0.525rem; width:0.35rem;}
+.cont-list .email i { background-image:url(../images/contact/email.png); background-size:0.4rem 0.35rem; width:0.4rem;}
+.cont-list .address i { background-image:url(../images/contact/address.png); background-size:0.375rem 0.475rem; width:0.375rem;}

@@ -23,15 +23,15 @@ function ring()
 		oUl.html('');
 		for(var i=0; i<N; i++)
 		{
-			var oLi=$('<li><a href="javascript:;"></a></li>');
-			oLi.children().eq(0).attr('href','index.html');
+			var oLi=$('<li><a href="javascript:;" target="_blank"></a></li>');
+			oLi.children().eq(0).attr('href','http://localhost/jingzhaoxia.github.com/data/html/mobile'+(i%5)+'.html');
 			oLi.children().eq(0).css({
 				'display':'block',
 				'margin':'0 auto',
 				'margin-top':'21px',
 				'width':'75px',
 				'height':'135px',
-				'background-image':'url(../data/images/'+(i%2)+'.jpg)',
+				'background-image':'url(http://localhost/jingzhaoxia.github.com/data/images/mobile'+(i%5)+'.jpg)',
 				'background-repeat':'no-repeat',
 				'background-size':'cover'
 			});

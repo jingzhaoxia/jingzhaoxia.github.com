@@ -1,0 +1,32 @@
+@charset "utf-8";
+/* 先把它列表隐藏了 */
+.g-head .menu { display:none; }
+/* 加入我们 */
+.g-style .banner { background:#21364b; }
+.g-style .banner img { width:16rem; height:7.9rem; }
+
+.style-show { background:#f2f4f8; padding:0.875rem 0 0.875rem 1.425rem;  }
+.style-bar { height:0.875rem; width:13.15rem; background:#fff url(../images/index/cont-tit.png) 0.425rem  0.25rem no-repeat; background-size:0.2rem 0.3rem;font-size:0.65rem; color:#002947; line-height:0.875rem; padding-left:1.25rem; box-sizing:border-box;  }
+.style-item .style-list div {  overflow:hidden; padding-top:0.9rem; width:13.15rem; }
+.style-item .style-list div  img,
+.style-item .style-list div  i { float:left; }
+.style-item .style-list div  span { float:right; }
+.style-item .style-list  img { width:8.75rem; height:3.45rem; }
+.style-item .style-list i { display:block; margin-left:0.375rem; width:0.275rem; height:3.45rem; background:url(../images/style/left.png) center center no-repeat; background-size:0.275rem 0.45rem; }
+.style-item .style-list span { display:-webkit-box; -webkit-box-align:center; -webkit-box-pack:center; background:url(../images/style/w-bg.png) no-repeat; background-size:3.4rem 3.425rem; width:3.4rem; height:3.425rem;  }
+.style-item .style-list em { text-indent:-99999px;  display:block; background-size:2.425rem 1.4rem; width:2.425rem; height:1.4rem; background-repeat:no-repeat; }
+
+.style-item .style-list .zzrs em {  background-image:url(../images/style/zzsr.png); }
+.style-item .style-list .khzz em {  background-image:url(../images/style/khzz.png); }
+.style-item .style-list .xdbg em {  background-image:url(../images/style/xdbg.png); }
+
+
+
+
+
+
+
+
+
+
+

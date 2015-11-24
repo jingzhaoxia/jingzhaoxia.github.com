@@ -1,0 +1,40 @@
+@charset "utf-8";
+/* 先把它列表隐藏了 */
+.g-head .menu { display:none; }
+/* 产品展示 */
+.g-product .banner { padding:0.275rem 0; background:#21364b; }
+.g-product .banner img { width:16rem; height:7.7rem; }
+
+.product-show { background:#f2f4f8; padding:0.875rem 0 0 1.425rem;  }
+.product-bar { height:0.875rem; width:13.15rem; background:#fff url(../images/index/cont-tit.png) 0.425rem  0.25rem no-repeat; background-size:0.2rem 0.3rem;font-size:0.65rem; color:#002947; line-height:0.875rem; padding-left:1.25rem; box-sizing:border-box;  }
+
+.product-item {  width:13.15rem;  overflow:hidden; }
+.prod-list { width:13.9rem; padding-top:0.875rem; overflow:hidden; }
+.prod-list li { display:-webkit-box; -webkit-box-orient:vertical; width:6.775rem; box-sizing:border-box; padding-right:0.4rem; float:left; font-size:0.4rem; color:#000000; margin-bottom:0.875rem; }
+.prod-list li img { width:6.375rem; height:4.525rem; }
+.prod-list li span { display:block; text-align:center; padding-top:0.35rem; }
+.prod-list li i { color:#ff3d21; padding:0 0.1rem; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

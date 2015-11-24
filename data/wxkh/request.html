@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<style>
+/*清楚默认样式*/
+h1, h2, h3, h4, h5, h6, p, ul, li, ol, dl, dt, dd, a, i, b, em, strong, img, input, body{margin:0; padding:0;}
+b, strong{font-weight:normal;}
+i, em{font-style:normal;}
+li{list-style:none;}
+a{text-decoration:none;}
+input,textarea{border:none; background:none; outline:none;}
+input, img, select{vertical-align:top;}
+textarea{outline:none; resize:none;}
+img{display:block; border:none; }
+
+.clearFix:after{ content:''; clear:both; display:block; }
+.clearFix{ zoom:1; }
+/*清楚默认样式*/
+
+html{font-size:20px;}
+.wrap_box{width:16rem;margin:0 auto;background:url(images/6.jpg); }
+
+
+header{height:3rem; width:100%; background:url(images/1.jpg) no-repeat; background-size:cover; text-align: center; line-height:3rem;}
+header h1{font-size:1.2rem; color:#fff;}
+
+.wrap{width:15rem; margin:0 auto; }
+.process{width:100%; height:2.85rem; display:-webkit-box; position:relative;}
+.process li{ text-align:center; height:100%; -webkit-box-flex:1; color:#666; font-size:0.6rem; }
+.process li span{display:block; height:2.075rem; line-height:2.075rem; }
+.process li i{ line-height:0.75rem; width:0.75rem; height:0.75rem; background:#ccc; border-radius:50%;display:inline-block; position:relative; z-index:2;}
+.process li i.on{ background:#c54c40; }
+.process li.line{width:11.5rem; height:0.2rem; position:absolute; left:1.7rem; bottom:0.3rem; background:-webkit-linear-gradient(left,#c54c40 8rem,#ccc 10rem);}
+
+h2{font-size:0.6rem; color:#c54c40; margin-top:1.3rem; margin-bottom:1rem;}
+
+.setup{width:100%; height:5.925rem; background:#fff; text-align:center;}
+.setup span{ display:block; background:url(images/10.png) no-repeat; width:0.75rem; height:0.75rem; background-size:cover; margin:1.6rem auto; z-index: 2;}
+.setup p{line-height:1.425rem; font-size:0.425rem; color:#666;}
+.s_box{width:7.45rem; height:3.925rem; background:#f7f7f7; border:1px solid #d9d9d9; margin:0 auto;}
+.setup2{width:100%; height:5.925rem;  text-align:center;}
+.setup2 span{ display:block; background:url(images/10.png) no-repeat; width:0.75rem; height:0.75rem; background-size:cover; margin:1.6rem auto; z-index: 2;}
+.setup2 p{line-height:1.425rem; font-size:0.425rem; color:#666;}
+.s_box2{width:7.45rem; height:3.925rem; background:#fff; border:1px solid #d9d9d9; margin:0 auto;}
+
+.next_box{margin:1.5rem auto; text-align:center; }
+.next_box a{color:#c54c40; font-size:0.575rem; }
+.next{width:7rem; height:1.5rem; background:-webkit-linear-gradient(#ff9679,#aa2618); border-radius:3px; display:block; margin:0 auto 1rem; font-size:0.7rem; color:#fff; display:inline-block;}
+
+.text {margin-left:1.1rem; margin-bottom:1.2rem; }
+.text input{float:left; width:0.5rem; height:0.5rem; }
+.text p{margin-left:0.6rem; font-size:0.5rem; color:#666; line-height:0.75rem;}
+.text p span{color:#c54c40;}
+
+.help{box-sizing:bordr-box; background:#fff; padding-left:0.425rem; width:13.95rem; height:2.7rem; border:1px solid #b8cedd; border-radius:2px; margin:0 auto;}
+.help p{width:11.5rem;font-size:0.6rem; color:#666; line-height:1.1rem; margin-top:0.3rem; float:left;}
+.help p i{color:#c54c40;}
+.help span{width:1.25rem; height:1.25rem; background:url(images/4.jpg) no-repeat; display:inline-block; background-size:cover; float: left; margin-top:0.75rem;margin-right:0.25rem;}
+
+footer h4{font-size:0.5rem; color:#c54c40; background:url(images/5.png) no-repeat; background-size:contain; padding-left:0.8rem; margin-top:1rem;}
+footer p{ font-size:0.5rem; line-height:0.9rem; text-indent:2em; color:#666; margin-top:0.5rem; padding-bottom:1.5rem;}
+</style>
+<script>
+window.onload=function (){
+	document.documentElement.style.fontSize=20*document.documentElement.clientWidth/320+'px';
+};
+</script>
+</head>
+<body>
+	<div class="wrap_box">
+		<header>
+			<h1>开户申请表</h1>
+		</header>
+		<div class="wrap">
+			<ul class="process clearFix">
+				<li>
+					<span>基本信息</span>
+					<i class="on">1</i>
+				</li>
+				<li>
+					<span>基本信息</span>
+					<i class="on">2</i>
+				</li>
+				<li>
+					<span>基本信息</span>
+					<i class="on">3</i>
+				</li>
+				<li>
+					<span>基本信息</span>
+					<i>4</i>
+				</li>
+				<li class="line"></li>
+			</ul>
+			<h2>上传身份证资料</h2>
+			<div class="setup">
+				<p>身份证正面照片上传并预览</p>
+				<div class="s_box">
+					<span></span>
+				</div>
+			</div>
+			<div class="setup2">
+				<p>身份证反面照片上传并预览</p>
+				<div class="s_box2">
+					<span></span>
+				</div>
+			</div>
+			<div class="next_box clearFix">
+				<input class="next" type="submit" value="提交开户申请">
+				<a href="javascript:;">返回上一步</a>
+			</div>
+			<div class="text">
+				<input type="checkbox">
+				<p>我已阅读并完全理解<span>《钱币邮票交易风险提示书》</span>，愿意自行承担钱币邮票交易市场的各种风险。</p>
+			</div>
+			<div class="help">
+				<span></span>
+				<p>更多帮助请拨打服务热线：<i>400-616-5626</i>或在线咨询。我们将为您提供专业的服务。</p>
+			</div>
+			<footer>
+				<h4>免责声明</h4>
+				<p> 尊敬的客户，为了保证您的交易信息和资金安全，请确保您个人开户资料的真实性、有效性，严格使用本人相关信息、资料完成开户手续。对于使用非本人相关信息、资料完成开户所带来的所有损失，泉宏财富不承担任何责任。</p>
+			</footer>
+		</div>
+		
+	</div>
+</body>
+</html>
